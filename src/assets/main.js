@@ -1,4 +1,4 @@
-var moment = require("moment");
+// var moment = require("moment");
 // import moment from "moment";
 
 const menuItems = document.querySelector('.menuItems');
@@ -6,7 +6,10 @@ const searchInput = document.querySelector('.searchInput');
 const openSearch = document.getElementsByClassName('openSearch');
 const closeSearch = document.getElementById('closeSearch');
 const theDateField = document.querySelector('.theDate');
-theDateField.innerHTML = moment().locale('bn').format('LLLL');
+
+const d = new Date().toLocaleDateString('bn');
+
+theDateField.innerHTML = d;
 
 console.log(openSearch)
 
