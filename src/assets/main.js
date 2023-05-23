@@ -1,4 +1,4 @@
-// var moment = require("moment");
+var moment = require("moment");
 // import moment from "moment";
 
 const menuItems = document.querySelector('.menuItems');
