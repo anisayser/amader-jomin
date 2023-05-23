@@ -1,0 +1,79 @@
+/* UTILITIES START */
+.sm-img{
+    width: 160px;
+    height: 90px;
+}
+.xs-img{
+    width: 150px;
+    height: 75px;
+}
+.md-img{
+    width: 100%;
+    height: 186px;
+}
+/* UTILITIES ENDS */
+
+.social-icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* SOCIAL BACKGROUND COLORS */
+.bg-facebook{
+    background-color: #3B5998;
+}
+.bg-youtube{
+    background-color: #FF0000;
+}
+.bg-twitter{
+    background-color: #1DA1F2;
+}
+.bg-insta{
+    background-color: #CE2462;
+}
+
+/* NAVBAR STYLES */
+.megaOptions{
+    display: none;
+    width: 100vw;
+    /* background: #000; */
+    transition: all .5s ease-in-out;
+}
+.megaMenu{
+    cursor: pointer;
+}
+.megaMenu:hover .megaOptions{
+    transition: all .5s linear;
+    display: block;
+}
+/* NAVBAR STYLES */
+.news-card{
+    transition: all .5s ease;
+}
+.news-card:hover{
+    color: #032830;
+}
+
+.shadowText{
+    font-size: 18px;
+    padding: 30px 10px 10px;
+    background: linear-gradient(to top,#000000 0,#000000c7 33%,#000000c7 33%,#0000007d 66%,#0000007d 66%,#00000000 100%);
+}
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 990px) {
+    .navbarContainer{
+        overflow-x: auto;
+    }
+}
