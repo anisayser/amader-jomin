@@ -81,10 +81,10 @@
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 990px) {
-    .navbarContainer{
+    /* .navbarContainer{
         overflow-x: scroll;
         width: 100%;
-    }
+    } */
     .navbarMenu{
         position: inherit;
     }
@@ -95,4 +95,20 @@
         width: 100%;
         z-index: 999;
     }
+}
+@media screen and (max-width: 1200px) {
+    .navbarContainer{
+        overflow-x: scroll;
+        width: 100%;
+    }
+    /* .navbarMenu{
+        position: inherit;
+    }
+    .header{
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        width: 100%;
+        z-index: 999;
+    } */
 }

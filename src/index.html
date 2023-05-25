@@ -18,79 +18,83 @@
   <!-- HEADER AREA STARTS *********************************************-->
   <!-- Logo, Time, Social Icons -->
 
-  <section class="container py-2 header">
-    <form action="">
-      <div class="input-group py-2 searchInputOne d-none">
-        <input type="search" class="form-control shadow-none" placeholder="Search News" aria-label="Search News"
-          aria-describedby="button-addon2" />
-        <button class="btn btn-dark" type="button" id="button-addon2">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <button class="btn btn-secondary" type="button" id="closeSearchOne">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-    </form>
-    <div class="row headerItems">
-      <div class="col-1 col-md-4">
-        <!-- Mobile Drawer icon -->
-        <button class="d-lg-none btn btn-primary btn-sm fs-5" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-          <i class="fa-solid fa-bars text-white"></i>
-        </button>
-        <div class="w-75 d-none d-lg-flex">
-          <!-- LOGO -->
-          <img src="./images/logo.png" class="img-fluid" alt="" />
+  <section class="py-2 header">
+    <div class="container-xxl">
+      <form action="">
+        <div class="input-group py-2 searchInputOne d-none">
+          <input type="search" class="form-control shadow-none" placeholder="Search News" aria-label="Search News"
+            aria-describedby="button-addon2" />
+          <button class="btn btn-dark" type="button" id="button-addon2">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="btn btn-secondary" type="button" id="closeSearchOne">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
-      </div>
-
-      <div class="col-10 col-md-4 d-flex justify-content-center">
-        <div class="w-75 d-lg-none">
-          <!-- MOBILE LOGO -->
-          <img src="./images/logo.png" class="img-fluid" alt="" />
-        </div>
-
-        <!-- LOCATION & TIME -->
-        <div class="d-none d-lg-flex align-items-center gap-4">
-          <div class="d-flex align-items-baseline gap-1">
-            <i class="fa-solid fa-location-dot"></i>
-            <p class="m-0">ঢাকা</p>
+      </form>
+      <div class="row headerItems">
+        <div class="col-2 col-md-4">
+          <div class="d-lg-none d-flex h-100 w-100 justify-content-center align-items-center">
+            <!-- Mobile Drawer icon Bar -->
+            <button class="btn text-black " data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar">
+              <i class="fa-solid fa-bars fa-2xl"></i>
+            </button>
           </div>
-
-          <div class="d-flex align-items-baseline gap-1">
-            <i class="fa-sharp fa-regular fa-calendar"></i>
-            <p class="theDate m-0" id="">The Date Here</p>
+          <div class="w-75 d-none d-lg-flex">
+            <!-- LOGO -->
+            <img src="./images/logo.png" class="img-fluid" alt="" />
           </div>
         </div>
-      </div>
 
-      <div class="col-1 col-md-4 d-flex justify-content-end">
-        <!-- MOBILE SEARCH ICON -->
-        <button class="btn btn-link d-lg-none fw-bold fs-5 openSearchOne" type="button">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <!-- SOCIAL LINKS -->
-        <div class="d-none d-lg-flex align-items-center gap-2">
-          <a href="#">
-            <div class="bg-facebook social-icon">
-              <i class="fa-brands fa-facebook-f"></i>
+        <div class="col-8 col-md-4 d-flex justify-content-center">
+          <div class="w-75 d-lg-none">
+            <!-- MOBILE LOGO -->
+            <img src="./images/logo.png" class="img-fluid" alt="" />
+          </div>
+
+          <!-- LOCATION & TIME -->
+          <div class="d-none d-lg-flex align-items-center gap-4">
+            <div class="d-flex align-items-baseline gap-1">
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="m-0">ঢাকা</p>
             </div>
-          </a>
-          <a href="#">
-            <div class="bg-youtube social-icon">
-              <i class="fa-brands fa-youtube"></i>
+
+            <div class="d-flex align-items-baseline gap-1">
+              <i class="fa-sharp fa-regular fa-calendar"></i>
+              <p class="theDate m-0" id="">The Date Here</p>
             </div>
-          </a>
-          <a href="#">
-            <div class="bg-twitter social-icon">
-              <i class="fa-brands fa-twitter"></i>
-            </div>
-          </a>
-          <a href="#">
-            <div class="bg-insta social-icon">
-              <i class="fa-brands fa-instagram"></i>
-            </div>
-          </a>
+          </div>
+        </div>
+
+        <div class="col-2 col-md-4 d-flex justify-content-end">
+          <!-- MOBILE SEARCH ICON -->
+          <button class="btn btn-link d-lg-none fw-bold fs-5 openSearchOne" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <!-- SOCIAL LINKS -->
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <a href="#">
+              <div class="bg-facebook social-icon">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+            </a>
+            <a href="#">
+              <div class="bg-youtube social-icon">
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+            </a>
+            <a href="#">
+              <div class="bg-twitter social-icon">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+            </a>
+            <a href="#">
+              <div class="bg-insta social-icon">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -100,7 +104,7 @@
   <!-- NAVBAR AREA STARTS **************************************************-->
   <section class="navbarMenu w-100 z-3">
     <nav class="bg-primary w-100">
-      <div class="container navbarContainer ">
+      <div class="container-xxl navbarContainer ">
         <div class="d-flex align-items-center justify-content-xl-center w-100 menuItems">
           <div class="d-flex gap-4">
             <a href="" class="text-white text-decoration-none py-3">প্রচ্ছদ</a>
@@ -214,85 +218,73 @@
           <div class="offcanvas-body">
             <div class="row g-4">
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>প্রবাস</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>মতামত</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>ধর্ম</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>ছোটদের পোস্ট</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>ক্যাম্পাস</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>আইন-আদালত</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>পডকাস্ট</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>কৃষি ও প্রযুক্তি</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>এভিয়েশন</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>এক্লুসিভ</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>গণমাধ্যম</span>
                 </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
-                  style="font-size: 16px">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
                   <i class="fa-solid fa-circle-arrow-right"></i>
                   <span>কনভার্টার</span>
                 </a>
@@ -306,7 +298,7 @@
   <!-- NAVBAR AREA ENDS -->
 
   <!-- TRENDING NEWS SECTION START *****************************************-->
-  <section class="container py-3">
+  <section class="container-xxl py-3">
     <div class="d-flex align-items-center gap-3">
       <h4 class="fs-6 fw-bold text-nowrap">ট্রেন্ডিং :</h4>
       <div class="d-flex align-items-center text-nowrap gap-3 overflow-x-auto">
@@ -324,9 +316,9 @@
   <!-- TRENDING NEWS SECTION ENDS -->
 
   <!-- HERO BANNER SECTION ONE STARTS ******************************************-->
-  <section class="container py-2">
+  <section class="container-xxl py-2">
     <div class="row">
-      <div class="col-12 col-xxl-6 top-left-section order-xxl-1">
+      <div class="col-12 col-lg-6 top-left-section order-lg-1">
         <div>
           <div>
             <img src="./images/oil-price-20230523111044.webp" class="img-fluid w-100" alt="news image" />
@@ -344,7 +336,7 @@
           <div>
             <div class="border-top border-3">
               <div class="row pt-3">
-                <div class="col-12 col-xxl-6 d-flex gap-2 pb-3">
+                <div class="col-12 col-lg-6 d-flex gap-2 pb-3">
                   <div class="">
                     <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover sm-img"
                       alt="news image" />
@@ -353,7 +345,7 @@
                     <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
                   </div>
                 </div>
-                <div class="col-12 col-xxl-6 d-flex gap-2 pb-3">
+                <div class="col-12 col-lg-6 d-flex gap-2 pb-3">
                   <div class="">
                     <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover sm-img"
                       alt="news image" />
@@ -368,7 +360,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-xxl-3 top-list-1 order-xxl-0">
+      <div class="col-12 col-lg-3 top-list-1 order-lg-0">
         <div class="d-flex flex-column gap-3">
           <div class="d-flex gap-2">
             <div class="">
@@ -399,13 +391,13 @@
           </div>
 
           <!-- ADS AREA 300x250 -->
-          <div class="mx-auto pb-3" style="width: 300; height: 250">
-            <img src="./images/11283581144713754687.gif" alt="" />
+          <div class="mx-auto pb-3">
+            <img src="./images/11283581144713754687.gif" class="img-fluid" alt="" />
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-xxl-3 order-xxl-1">
+      <div class="col-12 col-lg-3 order-lg-1">
         <div class="border-top border-3 border-primary">
           <div class="d-flex align-items-center justify-content-between border-bottom border-1 py-2">
             <h4>মতামত</h4>
@@ -430,8 +422,8 @@
             </div>
 
             <!-- ADS AREA 300x250 -->
-            <div class="mx-auto mt-3" style="width: 300px; height: 250px">
-              <img src="./images/11283581144713754687.gif" alt="" />
+            <div class="mx-auto mt-3">
+              <img src="./images/11283581144713754687.gif" class="img-fluid" alt="" />
             </div>
           </div>
         </div>
@@ -441,9 +433,9 @@
   <!-- HERO BANNER SECTION ONE ENDS -->
 
   <!-- NEWS GRID SECTION ONE STARTS **********************************************-->
-  <section class="container py-3">
+  <section class="container-xxl py-3">
     <div class="row">
-      <div class="col-12 col-xxl-9">
+      <div class="col-12 col-lg-9">
         <div class="row">
           <div class="col-12 col-md-4">
             <a href="#" class="news-card text-decoration-none">
@@ -592,7 +584,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-xxl-3">
+      <div class="col-12 col-lg-3">
         <div class="border border-3 border-primary position-relative">
           <div class="position-sticky top-0 w-100 bg-secondary">
             <ul class="nav nav-pills w-100" id="pills-tab" role="tablist">
@@ -744,8 +736,8 @@
         </div>
         <!-- ADS AREA 300x250 -->
         <div>
-          <div class="mx-auto text-center py-3" style="width: 300; height: 250">
-            <img src="./images/11283581144713754687.gif" alt="" />
+          <div class="mx-auto text-center py-3">
+            <img src="./images/11283581144713754687.gif" class="img-fluid" alt="" />
           </div>
         </div>
       </div>
@@ -754,15 +746,15 @@
   <!-- NEWS GRID SECTION ONE ENDS -->
 
   <!-- ADS AREA 970X250 STARTS ********************************************************-->
-  <section class="container d-flex align-items-center justify-content-center">
+  <section class="container-xxl d-flex align-items-center justify-content-center">
     <a href="#"><img src="./images/10803787671724330660.gif" class="img-fluid" alt="" /></a>
   </section>
   <!-- ADS AREA 970X250 ENDS -->
 
   <!-- NEWS GRID SECTION TWO STARTS ***********************************************-->
-  <section class="container py-3">
+  <section class="container-xxl py-3">
     <div class="row">
-      <div class="col-12 col-xl-9">
+      <div class="col-12 col-lg-9">
         <div class="row">
           <div class="col-12">
             <div class="border-top border-3 border-primary">
@@ -777,7 +769,7 @@
             <div class="row g-1">
               <div class="col-12 col-md-6">
                 <div class="position-relative">
-                  <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" style="height: 186px" alt="" />
+                  <img src="./images/gfgf-20230523160602.jpg" class="img-fluid object-fit-cover w-100" alt="" />
                   <div class="position-absolute bottom-0 w-100">
                     <p class="m-0 text-white shadowText">
                       নদীর নিরাপত্তা নিয়ে সরকার কাজ করছে
@@ -787,7 +779,7 @@
               </div>
               <div class="col-12 col-md-6">
                 <div class="position-relative">
-                  <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" style="height: 186px" alt="" />
+                  <img src="./images/gfgf-20230523160602.jpg" class="img-fluid object-fit-cover w-100" alt="" />
                   <div class="position-absolute bottom-0 w-100">
                     <p class="m-0 text-white shadowText">
                       নদীর নিরাপত্তা নিয়ে সরকার কাজ করছে
@@ -797,7 +789,7 @@
               </div>
               <div class="col-12 col-md-6">
                 <div class="position-relative">
-                  <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" style="height: 186px" alt="" />
+                  <img src="./images/gfgf-20230523160602.jpg" class="img-fluid object-fit-cover w-100" alt="" />
                   <div class="position-absolute bottom-0 w-100">
                     <p class="m-0 text-white shadowText">
                       নদীর নিরাপত্তা নিয়ে সরকার কাজ করছে
@@ -807,7 +799,7 @@
               </div>
               <div class="col-12 col-md-6">
                 <div class="position-relative">
-                  <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" style="height: 186px" alt="" />
+                  <img src="./images/gfgf-20230523160602.jpg" class="img-fluid object-fit-cover w-100" alt="" />
                   <div class="position-absolute bottom-0 w-100">
                     <p class="m-0 text-white shadowText">
                       নদীর নিরাপত্তা নিয়ে সরকার কাজ করছে
@@ -846,7 +838,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-xl-3">
+      <div class="col-12 col-lg-3">
         <div class="border-top border-3 border-primary">
           <div class="d-flex align-items-center justify-content-between border-bottom border-1 border-primary py-2">
             <h4>রাজনীতি</h4>
@@ -913,9 +905,9 @@
   <!-- ADS AREA 970X250 ENDS -->
 
   <!-- NEWS GRID SECTION THREE STARTS -->
-  <section class="container pt-5">
+  <section class="container-xxl pt-5">
     <div class="row">
-      <div class="col-12 col-xl-9">
+      <div class="col-12 col-lg-9">
         <div class="row">
           <div class="col-12">
             <div class="border-top border-3 border-primary">
@@ -926,11 +918,10 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-xl-4 py-2">
+          <div class="col-12 col-lg-4 py-2">
             <a href="#" class="text-decoration-none">
               <div>
-                <img src="./images/4-20230523162901.jpg" class="img-fluid w-100 object-fit-cover" style="height: 166px"
-                  alt="" />
+                <img src="./images/4-20230523162901.jpg" class="img-fluid w-100 object-fit-cover" alt="" />
                 <p class="pt-2">
                   আম উৎপাদনে বাড়ছে ফ্রুট ব্যাগের ব্যবহার, কৃষিপণ্য ঘোষণার দাবি
                 </p>
@@ -938,15 +929,14 @@
             </a>
             <a href="#" class="text-decoration-none">
               <div>
-                <img src="./images/4-20230523162901.jpg" class="img-fluid w-100 object-fit-cover" style="height: 166px"
-                  alt="" />
+                <img src="./images/4-20230523162901.jpg" class="img-fluid w-100 object-fit-cover" alt="" />
                 <p class="pt-2">
                   আম উৎপাদনে বাড়ছে ফ্রুট ব্যাগের ব্যবহার, কৃষিপণ্য ঘোষণার দাবি
                 </p>
               </div>
             </a>
           </div>
-          <div class="col-12 col-xl-4 py-2">
+          <div class="col-12 col-lg-4 py-2">
             <div class="d-flex flex-column gap-2 p-2 mb-5">
               <div class="d-flex gap-2 border-bottom pb-2">
                 <div class="">
@@ -995,7 +985,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-xl-4 py-2">
+          <div class="col-12 col-lg-4 py-2">
             <div class="d-flex flex-column gap-2 p-2 mb-5 border-end">
               <div class="d-flex gap-2 border-bottom pb-2">
                 <div class="">
@@ -1046,7 +1036,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-xl-3">
+      <div class="col-12 col-lg-3">
         <div class="border-top border-3 border-primary">
           <div class="d-flex align-items-center justify-content-between border-bottom border-1 border-primary py-2">
             <h4>আপনার এলাকার খবর</h4>
@@ -1087,8 +1077,8 @@
           </form>
         </div>
         <!-- ADS AREA 300x250 -->
-        <div class="mx-auto mt-3" style="width: 300px; height: 250px">
-          <img src="./images/11283581144713754687.gif" alt="" />
+        <div class="mx-auto text-center mt-3">
+          <img src="./images/11283581144713754687.gif" class="img-fluid" alt="" />
         </div>
       </div>
     </div>
@@ -1096,9 +1086,9 @@
   <!-- NEWS GRID SECTION THREE ENDS -->
 
   <!-- NEWS GRID SECTION FOUR STARTS ***********************************************-->
-  <section class="container pt-3">
+  <section class="container-xxl pt-3">
     <div class="row">
-      <div class="col-12 col-xl-9">
+      <div class="col-12 col-lg-9">
         <div class="row">
           <div class="col-12">
             <div class="border-top border-3 border-primary">
@@ -1141,8 +1131,7 @@
                     <div class="row g-1">
                       <div class="col-12 col-md-6">
                         <div class="position-relative">
-                          <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" style="height: 186px"
-                            alt="" />
+                          <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" alt="" />
                           <div class="position-absolute bottom-0 w-100">
                             <p class="m-0 text-white shadowText">
                               নদীর নিরাপত্তা নিয়ে সরকার কাজ করছে
@@ -1152,8 +1141,7 @@
                       </div>
                       <div class="col-12 col-md-6">
                         <div class="position-relative">
-                          <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" style="height: 186px"
-                            alt="" />
+                          <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" alt="" />
                           <div class="position-absolute bottom-0 w-100">
                             <p class="m-0 text-white shadowText">
                               নদীর নিরাপত্তা নিয়ে সরকার কাজ করছে
@@ -1163,8 +1151,7 @@
                       </div>
                       <div class="col-12 col-md-6">
                         <div class="position-relative">
-                          <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" style="height: 186px"
-                            alt="" />
+                          <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" alt="" />
                           <div class="position-absolute bottom-0 w-100">
                             <p class="m-0 text-white shadowText">
                               নদীর নিরাপত্তা নিয়ে সরকার কাজ করছে
@@ -1174,8 +1161,7 @@
                       </div>
                       <div class="col-12 col-md-6">
                         <div class="position-relative">
-                          <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" style="height: 186px"
-                            alt="" />
+                          <img src="./images/gfgf-20230523160602.jpg" class="img-fluid w-100" alt="" />
                           <div class="position-absolute bottom-0 w-100">
                             <p class="m-0 text-white shadowText">
                               নদীর নিরাপত্তা নিয়ে সরকার কাজ করছে
@@ -1378,7 +1364,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-xl-3">
+      <div class="col-12 col-lg-3">
         <div class="border-top border-3 border-primary">
           <div class="d-flex align-items-center justify-content-between border-bottom border-1 border-primary py-2">
             <h4>শিক্ষা</h4>
@@ -1390,8 +1376,7 @@
           <div class="pt-2">
             <a href="#" class="text-decoration-none">
               <div>
-                <img src="./images/4-20230523162901.jpg" class="img-fluid w-100 object-fit-cover" style="height: 166px"
-                  alt="" />
+                <img src="./images/4-20230523162901.jpg" class="img-fluid w-100 object-fit-cover" alt="" />
                 <p class="pt-2">
                   আম উৎপাদনে বাড়ছে ফ্রুট ব্যাগের ব্যবহার, কৃষিপণ্য ঘোষণার দাবি
                 </p>
@@ -1431,7 +1416,7 @@
   <!-- ADS AREA 970X250 ENDS -->
 
   <!-- HERO BANNER SECTON TWO STARTS -->
-  <section class="container py-5">
+  <section class="container-xxl py-5">
     <div class="row">
       <div class="col-12">
         <div class="border-top border-3 border-primary">
@@ -2092,7 +2077,7 @@
     <div class="footer-top border-top border-3 border-primary py-2">
       <div class="container d-flex align-items-center justify-content-between">
         <div>
-          <img src="./images/logo.png" class="img-fluid" style="width: 300px" alt="" />
+          <img src="./images/logo.png" class="img-fluid" style="width: 250px" alt="" />
         </div>
         <div>
           <p class="m-0">সম্পাদক: মহিউদ্দিন সরকার</p>
