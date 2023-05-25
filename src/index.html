@@ -18,8 +18,20 @@
   <!-- HEADER AREA STARTS *********************************************-->
   <!-- Logo, Time, Social Icons -->
 
-  <section class="container py-2">
-    <div class="row">
+  <section class="container py-2 header">
+    <form action="">
+      <div class="input-group py-2 searchInputOne d-none">
+        <input type="search" class="form-control shadow-none" placeholder="Search News" aria-label="Search News"
+          aria-describedby="button-addon2" />
+        <button class="btn btn-dark" type="button" id="button-addon2">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="btn btn-secondary" type="button" id="closeSearchOne">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </form>
+    <div class="row headerItems">
       <div class="col-1 col-md-4">
         <!-- Mobile Drawer icon -->
         <button class="d-lg-none btn btn-primary btn-sm fs-5" data-bs-toggle="offcanvas"
@@ -54,7 +66,7 @@
 
       <div class="col-1 col-md-4 d-flex justify-content-end">
         <!-- MOBILE SEARCH ICON -->
-        <button class="btn btn-link d-lg-none fw-bold fs-5 openSearch" type="button">
+        <button class="btn btn-link d-lg-none fw-bold fs-5 openSearchOne" type="button">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <!-- SOCIAL LINKS -->
@@ -86,7 +98,7 @@
   <!-- HEADER AREA ENDS -->
 
   <!-- NAVBAR AREA STARTS **************************************************-->
-  <section class="navbarMenu position-sticky top-0 w-100 z-3">
+  <section class="navbarMenu w-100 z-3">
     <nav class="bg-primary w-100">
       <div class="container navbarContainer ">
         <div class="d-flex align-items-center justify-content-xl-center w-100 menuItems">
@@ -202,64 +214,88 @@
           <div class="offcanvas-body">
             <div class="row g-4">
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>প্রবাস</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>প্রবাস</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>মতামত</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>মতামত</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>ধর্ম</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>ধর্ম</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>ছোটদের পোস্ট</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>ছোটদের পোস্ট</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>ক্যাম্পাস</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>ক্যাম্পাস</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>আইন-আদালত</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>আইন-আদালত</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>পডকাস্ট</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>পডকাস্ট</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>কৃষি ও প্রযুক্তি</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>কৃষি ও প্রযুক্তি</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>এভিয়েশন</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>এভিয়েশন</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>এক্লুসিভ</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>এক্লুসিভ</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>গণমাধ্যম</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>গণমাধ্যম</span>
+                </a>
               </div>
               <div class="col-6">
-                <a href="#" class="text-decoration-none d-flex align-items-center gap-3"
-                  style="font-size: 16px"><span>কনভার্টার</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2"
+                  style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>কনভার্টার</span>
+                </a>
               </div>
             </div>
           </div>

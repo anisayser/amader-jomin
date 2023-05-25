@@ -37,7 +37,15 @@
     background-color: #CE2462;
 }
 
+/* HEADER STYLE */
+
+
 /* NAVBAR STYLES */
+.navbarMenu{
+    position: sticky;
+    top: 0;
+}
+
 .megaOptions{
     display: none;
     width: 100vw;
@@ -76,5 +84,15 @@
     .navbarContainer{
         overflow-x: scroll;
         width: 100%;
+    }
+    .navbarMenu{
+        position: inherit;
+    }
+    .header{
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        width: 100%;
+        z-index: 999;
     }
 }
