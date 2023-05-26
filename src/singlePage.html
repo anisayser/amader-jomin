@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News Portal</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/bootstrap.css" />
+  <link rel="stylesheet" href="./assets/main.css" />
+  <script src="../node_modules/moment/moment.js"></script>
+</head>
+
+<body class="bg-secondary">
+
+  <!-- HEADER AREA STARTS *********************************************-->
+  <!-- Logo, Time, Social Icons -->
+
+  <section class="py-2 header">
+    <div class="container-xxl">
+      <form action="">
+        <div class="input-group py-2 searchInputOne d-none">
+          <input type="search" class="form-control shadow-none" placeholder="Search News" aria-label="Search News"
+            aria-describedby="button-addon2" />
+          <button class="btn btn-dark" type="button" id="button-addon2">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="btn btn-secondary" type="button" id="closeSearchOne">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </form>
+      <div class="row headerItems">
+        <div class="col-2 col-md-4">
+          <div class="d-lg-none d-flex h-100 w-100 justify-content-center align-items-center">
+            <!-- Mobile Drawer icon Bar -->
+            <button class="btn text-black " data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar">
+              <i class="fa-solid fa-bars fa-2xl"></i>
+            </button>
+          </div>
+          <div class="w-75 d-none d-lg-flex">
+            <!-- LOGO -->
+            <img src="./images/logo.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+
+        <div class="col-8 col-md-4 d-flex justify-content-center">
+          <div class="d-lg-none">
+            <!-- MOBILE LOGO -->
+            <img src="./images/logo.png" class="img-fluid" alt="" />
+          </div>
+
+          <!-- LOCATION & TIME -->
+          <div class="d-none d-lg-flex align-items-center gap-4">
+            <div class="d-flex align-items-baseline gap-1">
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="m-0">ঢাকা</p>
+            </div>
+
+            <div class="d-flex align-items-baseline gap-1">
+              <i class="fa-sharp fa-regular fa-calendar"></i>
+              <p class="theDate m-0" id="">The Date Here</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 col-md-4">
+
+          <!-- MOBILE SEARCH ICON -->
+          <div class="d-flex d-lg-none justify-content-center h-100 w-100">
+            <button class="btn btn-link fw-bold fs-5 openSearchOne" type="button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <!-- SOCIAL LINKS -->
+          <div class="d-none d-lg-flex align-items-center justify-content-end h-100 w-100">
+            <div class="d-flex align-items-center gap-2">
+              <a href="#">
+                <div class="bg-facebook social-icon">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="bg-youtube social-icon">
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="bg-twitter social-icon">
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="bg-insta social-icon">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- HEADER AREA ENDS -->
+
+  <!-- NAVBAR AREA STARTS **************************************************-->
+  <section class="navbarMenu w-100 z-3">
+    <nav class="bg-primary w-100">
+      <div class="container-xxl navbarContainer ">
+        <div class="d-flex align-items-center justify-content-xl-center w-100 menuItems">
+          <div class="d-flex gap-4">
+            <a href="" class="text-white text-decoration-none py-3">প্রচ্ছদ</a>
+            <a href="" class="text-white text-decoration-none py-3">সর্বশেষ</a>
+            <a href="" class="text-white text-decoration-none py-3">জাতীয়</a>
+            <a href="" class="text-white text-decoration-none py-3">রাজনীতি</a>
+            <a href="" class="text-white text-decoration-none py-3">অর্থনীতি</a>
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle text-white py-3 d-none d-xl-block" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                সারাদেশ
+              </a>
+              <a class="nav-link text-white py-3 d-xl-none" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                সারাদেশ
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">জেলার খবর</a></li>
+              </ul>
+            </div>
+            <a href="" class="text-white text-decoration-none py-3">আন্তর্জাতিক</a>
+            <a href="" class="text-white text-decoration-none py-3">খেলা</a>
+            <a href="" class="text-white text-decoration-none py-3">বিনোদন</a>
+            <a href="" class="text-white text-decoration-none py-3">স্বাস্থ</a>
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle d-none d-xl-block text-white py-3" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                ফিচার
+              </a>
+              <a class="nav-link d-xl-none text-white py-3" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                ফিচার
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">লাইফস্টাইল</a></li>
+                <li><a class="dropdown-item" href="#">তথ্যপ্রযুক্তি</a></li>
+                <li><a class="dropdown-item" href="#">ট্যুরিজম</a></li>
+                <li><a class="dropdown-item" href="#">পড়াশোনা</a></li>
+              </ul>
+            </div>
+            <a href="" class="text-white text-decoration-none py-3">শিক্ষা</a>
+            <a href="" class="text-white text-decoration-none py-3">জবস</a>
+
+            <div class="megaMenu py-2 d-none d-lg-block">
+              <div class="d-flex align-items-center">
+                <i class="fa-solid fa-bars text-white"></i>
+                <button class="btn dropdown-toggle text-white">
+                  অন্যান্য
+                </button>
+              </div>
+
+              <div class="bg-white position-absolute start-0 mt-2 megaOptions shadow py-3">
+                <div class="container">
+                  <div class="row row-cols-6 row-gap-4">
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">প্রবাস</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">মতামত</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">ধর্ম</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">ছোটদের পোস্ট</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">ক্যাম্পাস</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">আইন-আদালত</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">পডকাস্ট</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">কৃষি ও প্রযুক্তি</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">এভিয়েশন</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">এক্লুসিভ</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">গণমাধ্যম</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="text-decoration-none">কনভার্টার</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-white py-3 d-none d-lg-flex openSearch">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="input-group py-2 searchInput d-none">
+            <input type="search" class="form-control shadow-none" placeholder="Search News" aria-label="Search News"
+              aria-describedby="button-addon2" />
+            <button class="btn btn-dark" type="button" id="button-addon2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="btn btn-secondary" type="button" id="closeSearch">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </form>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom border-primary">
+            <img src="./images/logo.png" class="img-fluid w-50" alt="" />
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="row g-4">
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>প্রবাস</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>মতামত</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>ধর্ম</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>ছোটদের পোস্ট</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>ক্যাম্পাস</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>আইন-আদালত</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>পডকাস্ট</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>কৃষি ও প্রযুক্তি</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>এভিয়েশন</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>এক্লুসিভ</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>গণমাধ্যম</span>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2" style="font-size: 16px">
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                  <span>কনভার্টার</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- NAVBAR AREA ENDS -->
+
+
+  <!-- SINGLE POST STARTS -->
+
+  <section class="container py-3">
+    <!-- BREADCRUMBS -->
+    <div class="d-flex align-items-center gap-2">
+      <a href="" class="text-decoration-none">প্রচ্ছদ</a>
+      <p class="m-0">/</p>
+      <a href="" class="text-decoration-none">জাতীয়</a>
+    </div>
+
+    <!-- THE POST -->
+    <div class="row pt-4">
+      <div class="col-12 col-lg-8">
+        <div>
+          <!-- post title -->
+          <h1 class="fs-2">যুক্তরাষ্ট্রের ভিসা প্রক্রিয়া পরিবর্তনে সরকার চাপ অনুভব করছে না</h1>
+
+          <div>
+            <div class="border-bottom">
+              <div class="d-flex align-items-center gap-3">
+                <img src="https://randomuser.me/api/portraits/men/14.jpg" class="img-fluid rounded-circle"
+                  style="width: 50px; height: 50px;" alt="">
+                <div>
+                  <p class="m-0 fw-semibold" style="font-size: 13px;">নিজস্ব প্রতিবেদক</p>
+                  <p class="m-0 fw-semibold" style="font-size: 12px;">২৫ মে ২০২৩, ০১:০৮ পিএম</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2 pt-1">
+                <p class="m-0 p-2 d-flex flex-column justify-content-center align-items-center fw-semibold"
+                  style="font-size: 15px;"><span>10</span> <span>Shares</span></p>
+                <a href="" class="text-decoration-none">
+                  <div class="py-1 rounded  d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 35px; background-color: lightgrey;">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </div>
+                </a>
+                <a href="" class="text-decoration-none">
+                  <div class="py-1 rounded  d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 35px; background-color: lightgrey;">
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                  </div>
+                </a>
+                <a href="" class="text-decoration-none">
+                  <div class="py-1 rounded  d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 35px; background-color: lightgrey;">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </div>
+                </a>
+                <a href="" class="text-decoration-none">
+                  <div class="py-1 rounded  d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 35px; background-color: lightgrey;">
+                    <i class="fa-solid fa-clone"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="pt-3">
+              <!-- single news image -->
+              <img src="./images/untitled-1-20230525130831.jpg" class="img-fluid" alt="">
+
+              <!-- single news contents -->
+              <div class="text-justify pt-3">
+                <p class="text-justify">যুক্তরাষ্ট্রের ভিসা প্রক্রিয়া পরিবর্তন নিয়ে সরকার চাপ অনুভব করছে না বলে মন্তব্য
+                  করেছেন কৃষিমন্ত্রী ড.
+                  মো. আব্দুর রাজ্জাক।</p>
+                <p class="text-justify">বৃহস্পতিবার (২৫ মে) সচিবালয়ে চীনের রাষ্ট্রদূতের সঙ্গে আলোচনা শেষে তিনি এ কথা
+                  বলেন।</p>
+                <p class="text-justify">কৃষিমন্ত্রী বলেন, ‘ভিসা প্রক্রিয়া পরিবর্তন সব নাগরিকের জন্য সমান। এটা আলাদা কোনো
+                  দল বা ব্যক্তির ওপর
+                  নিষেধাজ্ঞা নয়। আমার মনে হয় ভিসা প্রক্রিয়ার এই পরিবর্তন বিএনপির জন্যও প্রযোজ্য। তারা মানুষ পুড়িয়েছে,
+                  গণপরিবহনে আগুন দিয়েছে ও গর্ভবতী মায়ের অ্যাম্বুলেন্স আটকে রেখেছে। এগুলোর কারণে তাদের ভিসা প্রক্রিয়া
+                  বাধাগ্রস্ত হতে পারে। তবে নির্বাচন সামনে রেখে যুক্তরাষ্ট্রের ভিসা প্রক্রিয়া পরিবর্তনে সরকার চাপ অনুভব
+                  করছে না।’</p>
+
+                <p class="text-justify">‘ইতোমধ্যে আমাদের সরকার ও স্বরাষ্ট্র মন্ত্রণালয় লিখিতভাবে জানিয়েছে, ২০০৮ সালে
+                  একটি ফেয়ার ইলেকশনের
+                  মাধ্যমে আওয়ামী সরকার ক্ষমতায় এসেছে। এর পরে জনগণের চূড়ান্ত সিদ্ধান্তে পরপর তিনবার আওয়ামী লীগ জয়লাভ
+                  করেছে। তিনবার একটি দল ক্ষমতায় রয়েছে বলেই আমাদের নানামুখী উন্নয়ন সম্ভব হয়েছে৷ আরও একটি সুষ্ঠু-সুন্দর
+                  নির্বাচন করতে হবে। অর্থনীতি, শিক্ষা, বাণিজ্য ও কৃষিসহ সব ক্ষেত্রে আজ বাংলাদেশ বিশ্বব্যাপী প্রশংসিত
+                  হচ্ছে৷ প্রধানমন্ত্রী যেকোনও মূল্যে একটি নিরপেক্ষ ও গ্রহণযোগ্য নির্বাচনের ব্যবস্থা করবেন।’
+
+                  ‘কেউ যদি নির্বাচনে না আসে সেটা তাদের বিষয়৷ তবে আমরা শেষ দিন পর্যন্ত চাইব বিএনপি ও জাতীয় পার্টিসহ সব
+                  রাজনৈতিক দল নির্বাচনে অংশগ্রহণ করুক। জনগণ, কূটনীতিক ও প্রশাসনসহ সবাইকে নিয়ে একটা নিরপেক্ষ নির্বাচন
+                  হবে৷ আমার দৃঢ় বিশ্বাস বিএনপি নির্বাচনে অংশ নেবে।’</p>
+                <p class="text-justify">তিনি বলেন, ‘চীন এখন তৃতীয় বৃহত্তম অর্থনৈতিক শক্তি৷ তারা আমাদের বন্ধুত্বপূর্ণ
+                  দেশ। আমাদের বিভিন্ন মেগা
+                  প্রজেক্ট স্থাপনে ও কিছু ক্ষেত্রে অর্থ ঋণ দিয়েও তারা সহায়তা করছে। চীনের সঙ্গে আমাদের দ্বিপাক্ষিক
+                  সম্পর্ক খুব গুরুত্বপূর্ণ। আমরা সবসময় বলে থাকি আমরা সব দেশের সঙ্গেই বন্ধুত্বপূর্ণ সম্পর্ক গড়ে তুলব। তবে
+                  সবসময় আমাদের জাতীয় স্বার্থই স্থায়ী। আমাদের স্বাধীনতার সার্বভৌমত্ব ঠিক রেখে সব দেশের সঙ্গে
+                  বন্ধুত্বপূর্ণ সম্পর্ক থাকবে।’</p>
+
+                <div class="mt-4">
+                  <p class="text-muted text-secondary">এমএম/কেএ</p>
+                </div>
+              </div>
+
+              <!-- News Tags  -->
+              <div class="d-flex align-items-center gap-3 ">
+                <a href="" class="text-decoration-none p-2 rounded" style="background-color: lightgray;">কৃষিমন্ত্রী</a>
+                <a href="" class="text-decoration-none p-2 rounded" style="background-color: lightgray;">রাজধানীর
+                  খবর</a>
+                <a href="" class="text-decoration-none p-2 rounded" style="background-color: lightgray;">ভিসা নিষেধাজ্ঞা
+                  - Visa Restriction</a>
+                <a href="" class="text-decoration-none p-2 rounded" style="background-color: lightgray;">ঢাকার খবর</a>
+              </div>
+
+              <!-- COMMENT BOX AREA HERE ******************************** -->
+
+              <!-- COMMENT BOX AREA HERE ENDS ******************************** -->
+
+              <!-- Releted News -->
+              <div class="pt-4">
+                <div class="border-top border-3 border-primary">
+                  <div
+                    class="d-flex align-items-center justify-content-between border-bottom border-1 border-primary py-2">
+                    <h4>সম্পর্কিত</h4>
+                  </div>
+                </div>
+
+                <div class="row pt-3">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-12 col-md-4">
+                        <a href="#" class="news-card text-decoration-none">
+                          <div>
+                            <img src="./images/imran-khan-new-20230523034647.jpg" class="md-img object-fit-cover"
+                              alt="" />
+                          </div>
+                          <div>
+                            <p class="news-title pt-2" style="font-weight: 450; font-size: 16px">
+                              ‘সম্ভাব্য’ গ্রেপ্তারের আগে সমর্থকদের যা যা বললেন ইমরান খান
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <a href="#" class="news-card text-decoration-none">
+                          <div>
+                            <img src="./images/imran-khan-new-20230523034647.jpg" class="md-img object-fit-cover"
+                              alt="" />
+                          </div>
+                          <div>
+                            <p class="news-title pt-2" style="font-weight: 450; font-size: 16px">
+                              ‘সম্ভাব্য’ গ্রেপ্তারের আগে সমর্থকদের যা যা বললেন ইমরান খান
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <a href="#" class="news-card text-decoration-none">
+                          <div>
+                            <img src="./images/imran-khan-new-20230523034647.jpg" class="md-img object-fit-cover"
+                              alt="" />
+                          </div>
+                          <div>
+                            <p class="news-title pt-2" style="font-weight: 450; font-size: 16px">
+                              ‘সম্ভাব্য’ গ্রেপ্তারের আগে সমর্থকদের যা যা বললেন ইমরান খান
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <a href="#" class="news-card text-decoration-none">
+                          <div>
+                            <img src="./images/imran-khan-new-20230523034647.jpg" class="md-img object-fit-cover"
+                              alt="" />
+                          </div>
+                          <div>
+                            <p class="news-title pt-2" style="font-weight: 450; font-size: 16px">
+                              ‘সম্ভাব্য’ গ্রেপ্তারের আগে সমর্থকদের যা যা বললেন ইমরান খান
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <a href="#" class="news-card text-decoration-none">
+                          <div>
+                            <img src="./images/imran-khan-new-20230523034647.jpg" class="md-img object-fit-cover"
+                              alt="" />
+                          </div>
+                          <div>
+                            <p class="news-title pt-2" style="font-weight: 450; font-size: 16px">
+                              ‘সম্ভাব্য’ গ্রেপ্তারের আগে সমর্থকদের যা যা বললেন ইমরান খান
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <a href="#" class="news-card text-decoration-none">
+                          <div>
+                            <img src="./images/imran-khan-new-20230523034647.jpg" class="md-img object-fit-cover"
+                              alt="" />
+                          </div>
+                          <div>
+                            <p class="news-title pt-2" style="font-weight: 450; font-size: 16px">
+                              ‘সম্ভাব্য’ গ্রেপ্তারের আগে সমর্থকদের যা যা বললেন ইমরান খান
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                    <div class="col-12">
+                      <div class="border-top border-3 border-primary">
+                        <div
+                          class="d-flex align-items-center justify-content-between border-bottom border-1 border-primary py-2">
+                          <h4>আরও পড়ুন</h4>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-md-4">
+                          <a href="#" class="news-card text-decoration-none">
+                            <div>
+                              <img src="./images/imran-khan-new-20230523034647.jpg" class="md-img object-fit-cover"
+                                alt="" />
+                            </div>
+                            <div>
+                              <p class="news-title pt-2" style="font-weight: 450; font-size: 16px">
+                                ‘সম্ভাব্য’ গ্রেপ্তারের আগে সমর্থকদের যা যা বললেন ইমরান খান
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                          <a href="#" class="news-card text-decoration-none">
+                            <div>
+                              <img src="./images/imran-khan-new-20230523034647.jpg" class="md-img object-fit-cover"
+                                alt="" />
+                            </div>
+                            <div>
+                              <p class="news-title pt-2" style="font-weight: 450; font-size: 16px">
+                                ‘সম্ভাব্য’ গ্রেপ্তারের আগে সমর্থকদের যা যা বললেন ইমরান খান
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                          <a href="#" class="news-card text-decoration-none">
+                            <div>
+                              <img src="./images/imran-khan-new-20230523034647.jpg" class="md-img object-fit-cover"
+                                alt="" />
+                            </div>
+                            <div>
+                              <p class="news-title pt-2" style="font-weight: 450; font-size: 16px">
+                                ‘সম্ভাব্য’ গ্রেপ্তারের আগে সমর্থকদের যা যা বললেন ইমরান খান
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="col-12 col-lg-4">
+        <!-- ADS AREA 300x250 -->
+        <div>
+          <div class="mx-auto text-center py-3">
+            <img src="./images/11283581144713754687.gif" class="img-fluid" alt="" />
+          </div>
+        </div>
+        <div>
+          <div class="border-top border-3 border-primary pb-2">
+            <div class="d-flex align-items-center justify-content-between border-bottom border-1 border-primary py-2">
+              <h4>জাতীয় থেকে আরও</h4>
+            </div>
+          </div>
+          <div class="d-flex gap-2 border-bottom pb-2">
+            <div class="">
+              <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover xs-img"
+                alt="news image" />
+            </div>
+            <div>
+              <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 border-bottom pb-2">
+            <div class="">
+              <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover xs-img"
+                alt="news image" />
+            </div>
+            <div>
+              <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 border-bottom pb-2">
+            <div class="">
+              <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover xs-img"
+                alt="news image" />
+            </div>
+            <div>
+              <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 border-bottom pb-2">
+            <div class="">
+              <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover xs-img"
+                alt="news image" />
+            </div>
+            <div>
+              <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 border-bottom pb-2">
+            <div class="">
+              <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover xs-img"
+                alt="news image" />
+            </div>
+            <div>
+              <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADS AREA 300x250 -->
+        <div>
+          <div class="mx-auto text-center py-3">
+            <img src="./images/11283581144713754687.gif" class="img-fluid" alt="" />
+          </div>
+        </div>
+
+        <div>
+          <div class="border-top border-3 border-primary pb-2">
+            <div class="d-flex align-items-center justify-content-between border-bottom border-1 border-primary py-2">
+              <h4>সর্বশেষ</h4>
+            </div>
+          </div>
+          <div class="d-flex gap-2 border-bottom pb-2">
+            <div class="">
+              <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover xs-img"
+                alt="news image" />
+            </div>
+            <div>
+              <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 border-bottom pb-2">
+            <div class="">
+              <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover xs-img"
+                alt="news image" />
+            </div>
+            <div>
+              <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 border-bottom pb-2">
+            <div class="">
+              <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover xs-img"
+                alt="news image" />
+            </div>
+            <div>
+              <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 border-bottom pb-2">
+            <div class="">
+              <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover xs-img"
+                alt="news image" />
+            </div>
+            <div>
+              <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 border-bottom pb-2">
+            <div class="">
+              <img src="./images/gazipur-election-20230522220019.webp" class="img-fluid object-fit-cover xs-img"
+                alt="news image" />
+            </div>
+            <div>
+              <p class="fw-medium">জাহাঙ্গীরের মা আ.লীগের ‘টেনশন’!</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <!-- SINGLE POST ENDS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- FOOTER SECTION STARTS -->
+  <section class="footer">
+    <div class="footer-top border-top border-3 border-primary py-2">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div>
+          <img src="./images/logo.png" class="img-fluid" style="width: 250px" alt="" />
+        </div>
+        <div>
+          <p class="m-0">সম্পাদক: মহিউদ্দিন সরকার</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom bg-primary py-4">
+      <footer class="container">
+        <nav class="d-flex flex-wrap align-items-center justify-content-center gap-4">
+          <a href="#" class="text-decoration-none text-white">গোপনীয়তার নীতি</a>
+          <a href="#" class="text-decoration-none text-white">ব্যাবহার এ শর্তাবলী</a>
+          <a href="#" class="text-decoration-none text-white">আমাদের সম্পর্কে</a>
+          <a href="#" class="text-decoration-none text-white">আমরা</a>
+          <a href="#" class="text-decoration-none text-white">যোগাযোগ</a>
+          <a href="#" class="text-decoration-none text-white">আর্কাইভ</a>
+          <a href="#" class="text-decoration-none text-white">বিঙ্গাপন</a>
+        </nav>
+
+        <nav class="d-flex flex-wrap align-items-center justify-content-center gap-4 pt-3">
+          <a href="#" class="text-decoration-none text-white">৯৫ সোহরাওয়ার্দী এভিনিউ, ঢাকা ১২১২</a>
+          <a href="#" class="text-decoration-none text-white"><i class="fa-solid fa-phone"></i>
+            <span>+৮৮০ ৯৬১৩ ৬৭৮৬৭৮</span></a>
+          <a href="#" class="text-decoration-none text-white"><i class="fa-solid fa-mobile-screen"></i>
+            <span>+৮৮০ ৯৬১৩ ৬৭৮৬৭৮</span></a>
+          <a href="#" class="text-decoration-none text-white"><i class="fa-brands fa-whatsapp"></i>
+            <span>+৮৮০ ৯৬১৩ ৬৭৮৬৭৮</span></a>
+          <a href="#" class="text-decoration-none text-white"><i class="fa-sharp fa-solid fa-envelope"></i>
+            <span>+৮৮০ ৯৬১৩ ৬৭৮৬৭৮</span></a>
+        </nav>
+
+        <div class="border-top mt-4 py-3">
+          <p class="text-white text-center">
+            Amader Jomin (আমাদের জমিন) is one of the most popular and reliable
+            Bangla News publishers. It is the fastest-growing Bangla news
+            media that provides accurate and objective news within the
+            shortest possible time. Dhaka Post intends to cover its reach
+            throughout every district of the country, also global news of
+            every segment such as politics, economics, sports, entertainment,
+            education, information and technology, features, lifestyle, and
+            columns. Dhaka Post is owned by Bijoy Bangla Media Limited (BBML)
+            and sister concern of the US Bangla Group of Companies.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </section>
+  <!-- FOOTER SECTION ENDS -->
+
+  <!-- ALL JAVASCRIPT LINKS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="./assets/bootstrap.js"></script>
+  <script src="./assets/main.js"></script>
+</body>
+
+</html>
